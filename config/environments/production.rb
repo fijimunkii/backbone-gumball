@@ -1,4 +1,4 @@
-BackboneCandymachineJs::Application.configure do
+BackboneCandymachine::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests

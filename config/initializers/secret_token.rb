@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-BackboneCandymachineJs::Application.config.secret_token = 'd049c6d2f4f5291e52eb2c2dc11066109998cabfa40b1e0d5f5bceed44cb4e3cf04cda311eb05b6fa2927c38888f2ba8b716232f6a06bbaff9c81abe56776be9'
+BackboneCandymachine::Application.config.secret_token = 'bf2716e809a83f71b4b034bcaa3a19042be57d9cd5c7aa0d3631cf194db1cd0cb4a9a704709ff3f5e515754947887da106c68e8ecf29861a021c8dedc2f4c7c3'

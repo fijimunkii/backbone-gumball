@@ -1,4 +1,4 @@
-BackboneCandymachineJs::Application.routes.draw do
+BackboneCandymachine::Application.routes.draw do
   root to: 'welcome#index'
 
   get "welcome/index"

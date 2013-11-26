@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-BackboneCandymachineJs::Application.load_tasks
+BackboneCandymachine::Application.load_tasks

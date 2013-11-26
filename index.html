@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>candymachine dot js</title>
+
+  <script type="text/template" id="machine-list-template">
+    <a href="/#new" class="btn btn-primary">New Machine</a>
+    <hr />
+    <table class="table striped">
+      <thead>
+        <tr>
+          <th>Machine ID</th>
+          <th>Location</th>
+          <th>Type</th>
+          <th># Candy</th>
+          <th># Money</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% _.each(machines, function(machine) { %>
+          <tr>
+            <td><% machine.get('id') %></td>
+            <td><% machine.get('location') %></td>
+            <td><% machine.get('type') %></td>
+            <td><% machine.get('numCandy') %></td>
+            <td><% machine.get('money') %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </script>
+
+  <script type="text/template" id="edit-user-template">
+    <form class="edit-user-form">
+      <legend>Create Machine</legend>
+      <label>Location</label>
+      <input type="text" name="location" />
+      <label>Type</label>
+      <input type="text" name="type" />
+      <hr />
+      <button type="submit" class="btn">Create</button>
+    </form>
+  </script>
+
+
+
+
+
+  <script src="js/jquery.js"></script>
+  <script src="js/underscore.js"></script>
+  <script src="js/backbone.js"></script>
+  <script src="js/helpers.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/machine.js"></script>
+  <script src="js/main.js"></script>
+</head>
+<body>
+
+</body>
+</html>

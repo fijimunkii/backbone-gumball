@@ -1,0 +1,62 @@
+<script>
+  //  NOTE: http://stackoverflow.com/questions/7514922/rails-with-underscore-js-templates
+  _.templateSettings = {
+      interpolate: /\{\{\=(.+?)\}\}/g,
+      evaluate: /\{\{(.+?)\}\}/g
+  };
+</script>
+
+<script type="text/template" id="machine-list-template">
+  <a href="#/new" class="btn btn-primary">New Machine</a>
+  <hr />
+  <table class="table striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Location</th>
+        <th>Type</th>
+        <th>Candy</th>
+        <th>Money</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{ _.each(machines, function(machine) { }}
+        <tr>
+          <td>{{= machine.get('id') }}</td>
+          <td>{{= machine.get('location') }}</td>
+          <td>{{= machine.get('machinetype') }}</td>
+          <td>{{= machine.get('numCandy') }}</td>
+          <td>{{= machine.get('money') }}</td>
+          <td><a href="#/edit/{{= machine.id }}" class="btn">Edit</a></td>
+          <td><a href="#/refill/{{= machine.id }}" class="btn">Refill</a></td>
+          <td><a href="#/buy-candy/{{= machine.id }}" class="btn">Buy Candy</a></td>
+        </tr>
+      {{ }); }}
+    </tbody>
+  </table>
+</script>
+
+<script type="text/template" id="edit-machine-template">
+  <form class="edit-machine-form">
+    <legend>{{= machine ? 'Update' : 'Create' }} Machine</legend>
+    <label>Location</label>
+    <input type="text" name="location" value="{{= machine ? htmlEncode(machine.get('location')) : '' }}" />
+    <label>MachineType</label>
+    <input type="text" name="machinetype" value="{{= machine ? htmlEncode(machine.get('machinetype')) : '' }}" />
+    <hr />
+    {{ if (machine) { }}
+      <input type="hidden" name="id" value="{{= machine.id }}" />
+      <button type="button" class="btn btn-danger delete">Delete</button>
+    {{ }; }}
+    <button type="submit" class="btn">{{= machine ? 'Update' : 'Create' }}</button>
+  </form>
+</script>
+
+<div class="container">
+  <h1><a href="#/">Machine Manager</a></h1>
+  <hr />
+  <div class="page"></div>
+</div>

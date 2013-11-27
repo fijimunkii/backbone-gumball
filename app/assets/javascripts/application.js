@@ -12,4 +12,15 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require handlebars
+//= require bootstrap
+//= require underscore
+//= require backbone
+//= require backbone.debug
+//= require helpers
+//= require backbone/models/machine
+//= require backbone/collections/machines
+//= require backbone/views/edit_machine
+//= require backbone/views/machine_list
+//= require backbone/routers/router
+//= require main

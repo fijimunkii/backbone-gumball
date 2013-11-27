@@ -1,7 +1,7 @@
 BackboneCandymachine::Application.routes.draw do
   root to: 'welcome#index'
 
-  get "welcome/index"
+  resources :machines
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
